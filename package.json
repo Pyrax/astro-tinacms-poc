@@ -11,8 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^1.2.2",
     "@tinacms/cli": "^0.62.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "astro": "^1.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "tinacms": "^0.70.2"
   }
 }
