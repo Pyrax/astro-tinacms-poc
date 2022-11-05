@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "tinacms dev -c \"astro dev\" --noTelemetry",
+    "start": "tinacms dev -c \"astro dev\" --noTelemetry",
+    "build": "tinacms build --noTelemetry && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
