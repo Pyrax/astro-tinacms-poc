@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "astro-tinacms-poc",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,6 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.6.0"
+    "@tinacms/cli": "^0.62.3",
+    "astro": "^1.6.0",
+    "tinacms": "^0.70.2"
   }
 }
