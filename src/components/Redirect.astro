@@ -1,0 +1,8 @@
+---
+  const { to } = Astro.props
+  const { origin } = Astro.url
+---
+
+<head>
+  <meta http-equiv="refresh" content={ `0; url=${origin + to}` } />
+</head>
