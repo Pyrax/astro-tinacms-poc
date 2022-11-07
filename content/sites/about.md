@@ -1,6 +1,5 @@
 ---
-title: 'Hello, World!'
-date: '2022-11-05T23:00:00.000Z'
+title: About
 draft: false
 ---
 
