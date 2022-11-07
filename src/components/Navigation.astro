@@ -1,0 +1,14 @@
+---
+import { useSites } from '@hooks/useSites.astro';
+import { basename } from '@utils/path';
+
+const sites = await useSites();
+---
+
+<div>
+  <a href="/">Home</a>
+  <a href="/blog">Blog</a>
+  {sites.map((site) => (
+    <a href={new URL(basename(site.file), Astro.url.origin)}>{site.frontmatter.title}</a>
+  ))}
+</div>

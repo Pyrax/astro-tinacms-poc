@@ -1,0 +1,16 @@
+---
+import Navigation from '../components/Navigation.astro';
+
+export interface Props {
+  siteTitle: string;
+}
+
+const { siteTitle } = Astro.props;
+---
+
+<header>
+  <h1>{siteTitle}</h1>
+  <nav>
+    <Navigation />
+  </nav>
+</header>

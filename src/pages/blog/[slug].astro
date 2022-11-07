@@ -1,0 +1,29 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { basename } from '@utils/path';
+import { usePosts } from '@hooks/usePosts.astro';
+
+export async function getStaticPaths() {
+  const posts = await usePosts();
+
+  return posts.map((post) => {
+    return {
+      params: { slug: basename(post.file) },
+      props: {
+        post,
+      },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = post;
+const { title } = post.frontmatter
+---
+
+<Layout>
+  <article>
+    <h1>{title}</h1>
+    <Content />
+  </article>
+</Layout>

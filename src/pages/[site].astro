@@ -1,0 +1,29 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { basename } from '@utils/path';
+import { useSites } from '@hooks/useSites.astro';
+
+export async function getStaticPaths() {
+  const sites = await useSites();
+
+  return sites.map((site) => {
+    return {
+      params: { site: basename(site.file) },
+      props: {
+        site,
+      },
+    };
+  });
+}
+
+const { site } = Astro.props;
+const { Content } = site;
+const { title } = site.frontmatter
+---
+
+<Layout>
+  <main>
+    <h1>{title}</h1>
+    <Content />
+  </main>
+</Layout>

@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { basename } from '@utils/path';
+
+const allPosts = await Astro.glob('../../../content/posts/*.md');
+const publicPosts = allPosts.filter((p) => !p.frontmatter.draft);
+---
+
+<Layout>
+  <main>
+    <h1>Blog</h1>
+    <p class="instructions">Have fun reading my imaginary blog!</p>
+    {
+      publicPosts.length > 0 && (
+        <ul>
+          {publicPosts.map((post) => (
+            <li>
+              <a href={new URL(Astro.url + '/' + basename(post.file))}>{post.frontmatter.title}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </main>
+</Layout>
