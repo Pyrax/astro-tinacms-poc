@@ -8,7 +8,9 @@ export const blogPostCollection: Collection = {
   ui: {
     filename: {
       readonly: true,
-      slugify: (values) => `${values?.title?.toLowerCase().replace(/ /g, '-')}`, // TODO: prevent creating sub-directories
+      // Prevents spaces and special chars in filenames which means it also prevents sub directories (can be changed):
+      slugify: (values) =>
+        `${values?.title?.toLowerCase().replace(/[\/ \W]/g, '-')}`,
     },
   },
   defaultItem: () => ({
