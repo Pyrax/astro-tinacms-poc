@@ -5,10 +5,22 @@ import { basename } from '@utils/path';
 const sites = await useSites();
 ---
 
-<div>
+<nav class="nav">
   <a href="/">Home</a>
   <a href="/blog">Blog</a>
-  {sites.map((site) => (
-    <a href={new URL(basename(site.file), Astro.url.origin)}>{site.frontmatter.title}</a>
-  ))}
-</div>
+  {
+    sites.map((site) => (
+      <a href={new URL(basename(site.file), Astro.url.origin)}>
+        {site.frontmatter.title}
+      </a>
+    ))
+  }
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    gap: 12px;
+    font-size: 1.33rem;
+  }
+</style>

@@ -8,9 +8,16 @@ export interface Props {
 const { siteTitle } = Astro.props;
 ---
 
-<header>
+<header class="header">
   <h1>{siteTitle}</h1>
-  <nav>
-    <Navigation />
-  </nav>
+  <Navigation />
 </header>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+</style>
