@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: "Livvic", sans-serif;
   background-color: #f6f6f6;
 }
 
@@ -18,4 +18,17 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+}
+
+a {
+  color: #0860e3;
+}
+
+a:hover, a:active, a:focus {
+  color: #094aab;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(54, 54, 54);
+  font-family: "Cabin Sketch", cursive;
 }

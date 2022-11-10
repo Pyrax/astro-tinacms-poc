@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
+    "@fontsource/cabin-sketch": "^4.5.9",
+    "@fontsource/livvic": "^4.5.11",
     "@tinacms/cli": "^0.62.3",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.21",
