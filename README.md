@@ -1,6 +1,6 @@
-# Proof of concept for Astro + TinaCMS
+# Proof of concept for Astro with TinaCMS
 
-Astro is a framework for building content-focused websites while TinaCMS provides a visual content authoring experience backed by Git. Therefore, they seem to make a great couple with good DX and editor UX. This concept explores technical details and limitations of this combination.
+Astro is a framework for building content-focused websites whereas TinaCMS provides a visual content authoring experience backed by Git. Therefore, they seem to make a great couple with good DX and editor UX. This concept explores technical details and limitations of this combination.
 
 ## Goals
 
@@ -8,6 +8,8 @@ Astro is a framework for building content-focused websites while TinaCMS provide
 1. Create dynamic pages with TinaCMS for editors and add them to Astro.
 1. Keep defined pages (`src/pages`) and dynamic pages (`content`) separate.
 1. Being able to create dynamic pages at root-level (like https://example.com/privacy-policy). In combination with pre-defined pages this can be difficult in some frameworks.
+1. Edit content with live preview (called "Contextual Editing" in Tina).
+1. Demonstrate CI workflow.
 
 ## Limitations
 
