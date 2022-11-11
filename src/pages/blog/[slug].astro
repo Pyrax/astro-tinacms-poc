@@ -18,12 +18,18 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = post;
-const { title } = post.frontmatter
+const { title } = post.frontmatter;
 ---
 
 <Layout>
-  <article>
+  <article class="article">
     <h1>{title}</h1>
     <Content />
   </article>
 </Layout>
+
+<style>
+  .article :global(img) {
+    max-width: 100%;
+  }
+</style>
