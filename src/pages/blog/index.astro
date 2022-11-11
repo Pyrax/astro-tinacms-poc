@@ -3,9 +3,9 @@ import { Image } from '@astrojs/image/components';
 import PseudoImage from '@components/PseudoImage';
 import Layout from '@layouts/Layout.astro';
 import { basename } from '@utils/path';
+import { usePosts } from '@hooks/usePosts.astro';
 
-const allPosts = await Astro.glob('../../../content/posts/*.md');
-const publicPosts = allPosts.filter((p) => !p.frontmatter.draft);
+const posts = await usePosts();
 
 const printDate = (date: string) =>
   new Date(date).toLocaleDateString('en-UK', {
@@ -21,9 +21,9 @@ const printDate = (date: string) =>
     <h1>Blog</h1>
     <p class="instructions">Have fun reading my imaginary blog!</p>
     {
-      publicPosts.length > 0 && (
+      posts.length > 0 && (
         <ul class="posts">
-          {publicPosts.map((post) => (
+          {posts.map((post) => (
             <li class="card__wrapper">
               <a
                 href={new URL(Astro.url + '/' + basename(post.file))}
