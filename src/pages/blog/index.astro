@@ -1,9 +1,19 @@
 ---
+import { Image } from '@astrojs/image/components';
+import PseudoImage from '@components/PseudoImage';
 import Layout from '@layouts/Layout.astro';
 import { basename } from '@utils/path';
 
 const allPosts = await Astro.glob('../../../content/posts/*.md');
 const publicPosts = allPosts.filter((p) => !p.frontmatter.draft);
+
+const printDate = (date: string) =>
+  new Date(date).toLocaleDateString('en-UK', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
 ---
 
 <Layout>
@@ -12,10 +22,40 @@ const publicPosts = allPosts.filter((p) => !p.frontmatter.draft);
     <p class="instructions">Have fun reading my imaginary blog!</p>
     {
       publicPosts.length > 0 && (
-        <ul>
+        <ul class="posts">
           {publicPosts.map((post) => (
-            <li>
-              <a href={new URL(Astro.url + '/' + basename(post.file))}>{post.frontmatter.title}</a>
+            <li class="card__wrapper">
+              <a
+                href={new URL(Astro.url + '/' + basename(post.file))}
+                class="post__link"
+              >
+                <div class="grid card">
+                  {post.frontmatter.cover && (
+                    <div class="grid__item backdrop">
+                      <Image
+                        src={`${post.frontmatter.cover}`}
+                        alt=""
+                        width={400}
+                        height={400}
+                        class="backdrop__image"
+                      />
+                    </div>
+                  )}
+                  {!post.frontmatter.cover && (
+                    <div class="grid__item backdrop">
+                      <PseudoImage className="backdrop__image" />
+                    </div>
+                  )}
+                  <div class="grid__item">
+                    <div class="card__text">
+                      <div class="card__title">{post.frontmatter.title}</div>
+                      <div class="card__subtitle">
+                        on {printDate(post.frontmatter.date)}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </li>
           ))}
         </ul>
@@ -23,3 +63,93 @@ const publicPosts = allPosts.filter((p) => !p.frontmatter.draft);
     }
   </main>
 </Layout>
+
+<style>
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(16em, 100%), 1fr));
+    grid-template-rows: 14em;
+    gap: 32px;
+  }
+
+  .post__link {
+    color: #f6f6f6;
+    text-decoration: none;
+  }
+
+  .post__link:hover,
+  .post__link:active,
+  .post__link:focus {
+    color: #f6f6f6;
+  }
+
+  .card {
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 8px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: 200ms ease-in-out transform;
+    transition-delay: 50ms;
+  }
+
+  .card__wrapper:hover .card {
+    transform: scale(0.96) rotate(2deg);
+  }
+
+  .card__text {
+    padding: 1em 1.2em;
+  }
+
+  .card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .card__subtitle {
+    font-size: 0.8rem;
+  }
+
+  .grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+
+  .grid__item {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex: 1 0;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .backdrop {
+    position: relative;
+    z-index: -1;
+  }
+
+  .backdrop:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.65) 70%
+    );
+    border-radius: 1rem;
+  }
+
+  .backdrop__image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+  }
+</style>

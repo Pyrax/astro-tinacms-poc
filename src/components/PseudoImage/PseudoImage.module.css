@@ -1,0 +1,6 @@
+.pseudo-image {
+  background: var(--colors-background, cadetblue);
+  height: 100%;
+  width: 100%;
+  filter: saturate(60%);
+}
