@@ -2,7 +2,6 @@
 import { Image } from '@astrojs/image/components';
 import PseudoImage from '@components/PseudoImage';
 import Layout from '@layouts/Layout.astro';
-import { basename } from '@utils/path';
 import { usePosts } from '@hooks/usePosts.astro';
 
 const posts = await usePosts();
@@ -25,10 +24,7 @@ const printDate = (date: string) =>
         <ul class="posts">
           {posts.map((post) => (
             <li class="card__wrapper">
-              <a
-                href={new URL(Astro.url + '/' + basename(post.file))}
-                class="post__link"
-              >
+              <a href={new URL(Astro.url + '/' + post.slug)} class="post__link">
                 <div class="grid card">
                   {post.frontmatter.cover && (
                     <div class="grid__item backdrop">
@@ -49,9 +45,11 @@ const printDate = (date: string) =>
                   <div class="grid__item">
                     <div class="card__text">
                       <div class="card__title">{post.frontmatter.title}</div>
-                      <div class="card__subtitle">
-                        on {printDate(post.frontmatter.date)}
-                      </div>
+                      {post.frontmatter.date && (
+                        <div class="card__subtitle">
+                          on {printDate(post.frontmatter.date)}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

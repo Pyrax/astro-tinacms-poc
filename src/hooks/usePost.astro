@@ -1,0 +1,13 @@
+---
+import { client } from '../../.tina/__generated__/client';
+
+interface UsePostProps {
+  slug: string;
+}
+
+export async function usePost({ slug }: UsePostProps) {
+  return await client.queries.post({
+    relativePath: slug + '.md',
+  });
+}
+---

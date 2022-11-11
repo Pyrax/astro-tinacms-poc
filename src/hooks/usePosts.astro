@@ -1,6 +1,21 @@
 ---
+import { client } from '../../.tina/__generated__/client';
+
 export async function usePosts() {
-  const allPosts = await Astro.glob('../../content/posts/*.md');
-  return allPosts.filter((p) => !p.frontmatter.draft);
+  const { data } = await client.queries.postConnection();
+
+  const posts =
+    data.postConnection?.edges?.map((x) => {
+      const node = x!.node!;
+      const { _sys, __typename, body, ...frontmatter } = node;
+
+      return {
+        slug: _sys.filename,
+        frontmatter,
+        body,
+      };
+    }) ?? [];
+
+  return posts;
 }
 ---
