@@ -10,8 +10,6 @@
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"]
-    },
-    "module": "Node16",
-    "moduleResolution": "Node16"
+    }
   }
 }
