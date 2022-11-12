@@ -2,22 +2,19 @@
 import Layout from '@layouts/Layout.astro';
 import { usePosts } from '@hooks/usePosts.astro';
 import { usePost } from '@hooks/usePost.astro';
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import BlogPost from '@components/BlogPost';
 
 export async function getStaticPaths() {
   const posts = await usePosts();
   return posts.map((post) => ({ params: { slug: post.slug } }));
 }
 
-const {
-  data: { post },
-} = await usePost({ slug: Astro.params.slug as string });
+const postResponse = await usePost({ slug: Astro.params.slug as string });
 ---
 
 <Layout>
   <article class="article">
-    <h1>{post.title}</h1>
-    <TinaMarkdown content={post.body} />
+    <BlogPost {...postResponse} client:load />
   </article>
 </Layout>
 

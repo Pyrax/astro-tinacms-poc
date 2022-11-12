@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index c9afdb14a36b438d52bc12028fe453e6dccfa9aa..4bf4679b3d5f8186ab2e257c3d676e34b3f85e9b 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,7 @@
+ {
+   "name": "tinacms",
+   "version": "1.0.0",
++  "type": "module",
+   "main": "dist/index.js",
+   "module": "./dist/index.es.js",
+   "exports": {

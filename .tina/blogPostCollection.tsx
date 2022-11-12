@@ -12,6 +12,7 @@ export const blogPostCollection: Collection = {
       slugify: (values) =>
         `${values?.title?.toLowerCase().replace(/[ \W]/g, '-')}`,
     },
+    router: ({ document }) => `/blog/${document._sys.filename}`,
   },
   defaultItem: () => ({
     date: new Date().toISOString(),

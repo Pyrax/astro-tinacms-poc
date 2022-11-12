@@ -15,9 +15,9 @@ Astro is a framework for building content-focused websites whereas TinaCMS provi
 
 This concept has a few limitations which might be resolvable by using a different approach. Currently, I am aware of the following:
 
-1. TinaCMS generates `public/admin/index.html` which Astro only servers at `/admin/index.html`. I created a meta redirect at `/admin` to said `/admin/index.html`. This solution is independant from hosting providers. A better solution would be setting up an URL rewrite for your hoster.
-1. Relative paths to retrieve content with `Astro.glob()` can be very long since content lives in root folder. Broken paths can occur quickly this way. This is somewhat fixed by using Astro utility components from `src/hooks`.
-1. URLs for CMS content are currently generated through the filename of the markdown files. This leaves some space for errors.
+1. Markdown from TinaCMS must be rendered through a separate parser since Astro uses an internal component which is only exposed through direct imports. In fact, once in production, we are actually fetching and rendering remote markdown. Do not let yourself be fooled that content is stored in this repo and in local mode it directly edits these local files.
+2. TinaCMS generates `public/admin/index.html` which Astro only servers at `/admin/index.html`. I created a meta redirect at `/admin` to said `/admin/index.html`. This solution is independant from hosting providers. A better solution would be setting up an URL rewrite for your hoster.
+3. URLs for CMS content are currently generated through the filename of the markdown files. This leaves some space for errors.
 
 ## Feedback
 
