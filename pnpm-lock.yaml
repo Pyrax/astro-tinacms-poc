@@ -5,7 +5,7 @@ specifiers:
   '@astrojs/react': ^1.2.2
   '@fontsource/cabin-sketch': ^4.5.9
   '@fontsource/livvic': ^4.5.11
-  '@tinacms/cli': ^0.62.3
+  '@tinacms/cli': 1.0.1
   '@types/node': ^18.11.9
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
@@ -19,14 +19,14 @@ specifiers:
   react-is: ^17.0.0
   scheduler: ^0.23.0
   sharp: ^0.31.2
-  tinacms: 1.0.0
+  tinacms: 1.0.1
 
 dependencies:
   '@astrojs/image': 0.11.2_sharp@0.31.2
   '@astrojs/react': 1.2.2_gqczyrwmhlwpr6z64d3xh3wv54
   '@fontsource/cabin-sketch': 4.5.9
   '@fontsource/livvic': 4.5.11
-  '@tinacms/cli': 0.62.3_poefzype6zg2bi2kycbcwh76gm
+  '@tinacms/cli': 1.0.1_poefzype6zg2bi2kycbcwh76gm
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
@@ -40,7 +40,7 @@ dependencies:
   react-is: 17.0.2
   scheduler: 0.23.0
   sharp: 0.31.2
-  tinacms: 1.0.0_bwvfdbx4rukx3izspvazjoxfdu
+  tinacms: 1.0.1_bwvfdbx4rukx3izspvazjoxfdu
 
 packages:
 
@@ -2025,8 +2025,8 @@ packages:
       tailwindcss: 3.2.2
     dev: false
 
-  /@tinacms/app/0.0.28_@types+react@18.0.25:
-    resolution: {integrity: sha512-7Nhck+rpUR1xcbt9oIKC5wncmNEWfGxCELsY3g2gsV0+i8A6b+HmtYMo9aYOtcfqsjKY6fvGYvzyiAeWYtV/GQ==}
+  /@tinacms/app/1.0.0_@types+react@18.0.25:
+    resolution: {integrity: sha512-awNlEud8RDYvZj7SAJOYjzEDmmcL7BtRaVKqPBRElS00GaqWjCKZzXF4XkeAgylZNeeVfKKFEIvSmeUpGUjcsQ==}
     dependencies:
       '@headlessui/react': 1.6.6_sfoxds7t5ydpegc3knd667wn6m
       '@heroicons/react': 1.0.6_react@17.0.2
@@ -2064,8 +2064,8 @@ packages:
       - ts-node
     dev: false
 
-  /@tinacms/cli/0.62.3_poefzype6zg2bi2kycbcwh76gm:
-    resolution: {integrity: sha512-KW/wJ5yTv8JwjdzmFMjoyyELYk2OR/77HVMYHXW04kD9C6sZyGqaGIzXAlnInNnSNKoAiedWvNhqm+1WTBiZ4Q==}
+  /@tinacms/cli/1.0.1_poefzype6zg2bi2kycbcwh76gm:
+    resolution: {integrity: sha512-szNNkUu9SfzF38mmJQN8gpvM+0qZcQApupinCvcTC3SVwlP44Ffkuw4/EZP0xxuuKoiO+/Kz0leW67yRUr21Eg==}
     hasBin: true
     dependencies:
       '@graphql-codegen/core': 2.6.5_graphql@15.8.0
@@ -2076,11 +2076,11 @@ packages:
       '@graphql-codegen/visitor-plugin-common': 2.13.1_graphql@15.8.0
       '@graphql-tools/graphql-file-loader': 7.5.9_graphql@15.8.0
       '@graphql-tools/load': 7.8.4_graphql@15.8.0
-      '@tinacms/app': 0.0.28_@types+react@18.0.25
-      '@tinacms/datalayer': 0.2.4
-      '@tinacms/graphql': 0.63.20_react@18.2.0
-      '@tinacms/metrics': 0.0.3_fs-extra@9.1.0
-      '@tinacms/schema-tools': 0.2.2_react@18.2.0+yup@0.32.11
+      '@tinacms/app': 1.0.0_@types+react@18.0.25
+      '@tinacms/datalayer': 1.0.0
+      '@tinacms/graphql': 1.0.1_react@18.2.0
+      '@tinacms/metrics': 1.0.0_fs-extra@9.1.0
+      '@tinacms/schema-tools': 1.0.1_react@18.2.0+yup@0.32.11
       add: 2.0.6
       ajv: 6.12.6
       altair-express-middleware: 4.0.6
@@ -2127,8 +2127,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@tinacms/datalayer/0.2.4:
-    resolution: {integrity: sha512-LJycWHKgJ3XrR15sxo5qTS86vSZ8ZMybWOgL+TPSuGwJEzGm8Hx6o+aTpHrW5lqc3az3N7nTeGhJnKVjbIS+IA==}
+  /@tinacms/datalayer/1.0.0:
+    resolution: {integrity: sha512-pRKVUZ0UPkX8PROUATFR2TFtf5oBtHpmK3l+l5mod+jYBf1pgP4EHoqkyTa5RCT43AWTnSwNTfQ2sYOnQi/giQ==}
     dependencies:
       '@octokit/auth-app': 2.11.0
       '@octokit/graphql': 4.8.0
@@ -2154,13 +2154,13 @@ packages:
       - encoding
     dev: false
 
-  /@tinacms/graphql/0.63.20_react@18.2.0:
-    resolution: {integrity: sha512-FfGj/Jyky7Wr4IsFX5vAw+8Lv7KkCD9EuK/VSasEqUNGGO5cAMH+bF89AvpbBfekPU8V/PCBrpy7BHMlti5QhA==}
+  /@tinacms/graphql/1.0.1_react@18.2.0:
+    resolution: {integrity: sha512-ZeRZFNKd0IHGY7RmknI3+au8p2VTeewEONez50WFbetcC9MV279O6kGXXoSpXX2WkkP3sRl1KWl+StdxXYQ4LA==}
     dependencies:
       '@graphql-tools/relay-operation-optimizer': 6.5.11_graphql@15.8.0
-      '@tinacms/datalayer': 0.2.4
-      '@tinacms/mdx': 0.61.17_react@18.2.0+yup@0.32.11
-      '@tinacms/schema-tools': 0.2.2_react@18.2.0+yup@0.32.11
+      '@tinacms/datalayer': 1.0.0
+      '@tinacms/mdx': 1.0.1_react@18.2.0+yup@0.32.11
+      '@tinacms/schema-tools': 1.0.1_react@18.2.0+yup@0.32.11
       body-parser: 1.20.1
       cors: 2.8.5
       dataloader: 2.1.0
@@ -2209,10 +2209,10 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@tinacms/mdx/0.61.17_react@18.2.0+yup@0.32.11:
-    resolution: {integrity: sha512-xf6NOGFAizj9bcvqyoy3naZhg3sqFodL97cNi1DDkh9CkW3ojewqV6uZhSNzKIgBLuNxjTdcv6pKeyQ65/1zTg==}
+  /@tinacms/mdx/1.0.1_react@18.2.0+yup@0.32.11:
+    resolution: {integrity: sha512-gE+oTg6FvD/bGOcKhJ732xMXSpSbMkJSS0Dl/4F1amkTOkyEo70NSPeSzSmpUpDd/PdK869anESoOiKQ/vdSTw==}
     dependencies:
-      '@tinacms/schema-tools': 0.2.2_react@18.2.0+yup@0.32.11
+      '@tinacms/schema-tools': 1.0.1_react@18.2.0+yup@0.32.11
       acorn: 8.8.1
       lodash-es: 4.17.21
       mdast-util-mdx-jsx: 2.1.0
@@ -2220,7 +2220,6 @@ packages:
       prettier: 2.7.1
       remark: 14.0.2
       remark-mdx: 2.1.5
-      remark-unwrap-images: 3.0.1
       unist-util-visit: 4.1.1
       vfile: 4.2.1
     transitivePeerDependencies:
@@ -2229,8 +2228,8 @@ packages:
       - yup
     dev: false
 
-  /@tinacms/metrics/0.0.3_fs-extra@9.1.0:
-    resolution: {integrity: sha512-qopRyLvkbNuHuZGHdXsJ6M1DxtB65aecDIf8s8XZP9l6NfEfmWPC4/1uMYgG4PtTLgRymprM0l51XLqneq+5Ng==}
+  /@tinacms/metrics/1.0.0_fs-extra@9.1.0:
+    resolution: {integrity: sha512-nMRpC8FEl2ZDC3+0d+rTGCLi6taYdDHOiwvXHnt2j+eVneWKX1gyiLpDp7aHqzvIvDG6UFMXCs5IOeG+fIjPiQ==}
     peerDependencies:
       fs-extra: ^9.0.1
     dependencies:
@@ -2240,19 +2239,8 @@ packages:
       - encoding
     dev: false
 
-  /@tinacms/schema-tools/0.2.2_react@18.2.0+yup@0.32.11:
-    resolution: {integrity: sha512-yIsJhBBl9LzvtsYtb2XXKmjO/TL5LladprWtUfWU/lc4SWqTbeOQQHizgIrb/pHWyf39NxjJGCy9xejUl8+GNg==}
-    peerDependencies:
-      react: '>=16.14.0'
-      yup: ^0.32.0
-    dependencies:
-      react: 18.2.0
-      yup: 0.32.11
-      zod: 3.19.1
-    dev: false
-
-  /@tinacms/schema-tools/1.0.0_react@18.2.0+yup@0.32.11:
-    resolution: {integrity: sha512-HxHSETe7ugz6C1Vb3iWtIy4c5muAj7MuDoEE7wQuoi0/JjHlIRmipgaQTmTbsqnq4Fry65mZ9c5rBY+1fPoG1w==}
+  /@tinacms/schema-tools/1.0.1_react@18.2.0+yup@0.32.11:
+    resolution: {integrity: sha512-GzH6P3eCPNITfs//7n9SV13MzplLnRhldAUSyF766p1tDoUcS58E4xojJt/kID6zxl2hY2VtOzwE9i9cNdkQ4g==}
     peerDependencies:
       react: '>=16.14.0'
       yup: ^0.32.0
@@ -2274,8 +2262,8 @@ packages:
       react-is: 17.0.2
     dev: false
 
-  /@tinacms/toolkit/1.0.0_bwvfdbx4rukx3izspvazjoxfdu:
-    resolution: {integrity: sha512-TriOjmzcGCmcZiMUcoL/NAiJ6LfV4+v2S6c09Uyn9u7WUEM29WgeePslSYwlWQPQXtCPCkcbV7PoaP7wAKQCMw==}
+  /@tinacms/toolkit/1.0.1_bwvfdbx4rukx3izspvazjoxfdu:
+    resolution: {integrity: sha512-uRQvXqn4a0yXgWjQpMYKGUzUG5WjAsw9zdQ8dJuMz+PNPwNdpylCUs/pNiQ6eEKqs/nT0rDGpUDL67iJ1FOvyg==}
     peerDependencies:
       react: '>=16.14'
       react-dom: '>=16.14'
@@ -9396,15 +9384,6 @@ packages:
       mdast-util-to-markdown: 0.6.5
     dev: false
 
-  /remark-unwrap-images/3.0.1:
-    resolution: {integrity: sha512-5VUY0n+J9lPTPfkct5S3/SbutryBjp8J/4mbgtlkDrOk3h8jde0hyqdYUJOoJKherZezS08tjd6i4+nnQ+wl5w==}
-    dependencies:
-      '@types/mdast': 3.0.10
-      hast-util-whitespace: 2.0.0
-      unified: 10.1.2
-      unist-util-visit: 4.1.1
-    dev: false
-
   /remark/13.0.0:
     resolution: {integrity: sha512-HDz1+IKGtOyWN+QgBiAT0kn+2s6ovOxHyPAFGKVE81VSzJ+mq7RwHFledEvB5F1p4iJvOah/LOKdFuzvRnNLCA==}
     dependencies:
@@ -10267,8 +10246,8 @@ packages:
       minimatch: 3.1.2
     dev: false
 
-  /tinacms/1.0.0_bwvfdbx4rukx3izspvazjoxfdu:
-    resolution: {integrity: sha512-A/buK3V6fA7qY5biEgdfmxSTnpgUM48NyR6Z+aRoy06IS91Gs+27FdbkrIqaj2PWXUdJTd9c3WN1PzAaGXNzGg==}
+  /tinacms/1.0.1_bwvfdbx4rukx3izspvazjoxfdu:
+    resolution: {integrity: sha512-4S8nIE8PaRtB7B5dhjy32UvC32ncCm3+jAZQCDsnR7wbX1TRkg/ozMFqnEZSclUGqs2xAWOsjxl3Lbg14sXX4Q==}
     peerDependencies:
       react: '>=16.14.0'
       react-dom: '>=16.14.0'
@@ -10278,9 +10257,9 @@ packages:
       '@headlessui/react': 1.7.4_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 1.0.6_react@18.2.0
       '@react-hook/window-size': 3.1.1_react@18.2.0
-      '@tinacms/schema-tools': 1.0.0_react@18.2.0+yup@0.32.11
+      '@tinacms/schema-tools': 1.0.1_react@18.2.0+yup@0.32.11
       '@tinacms/sharedctx': 1.0.0_pumtretovylab5lwhztzjp2kuy
-      '@tinacms/toolkit': 1.0.0_bwvfdbx4rukx3izspvazjoxfdu
+      '@tinacms/toolkit': 1.0.1_bwvfdbx4rukx3izspvazjoxfdu
       crypto-js: 4.1.1
       encoding: 0.1.13
       fetch-ponyfill: 7.1.0_encoding@0.1.13
