@@ -29,11 +29,6 @@
     "react-is": "^17.0.0",
     "scheduler": "^0.23.0",
     "sharp": "^0.31.2",
-    "tinacms": "^1.0.0"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "tinacms@1.0.0": "patches/tinacms@1.0.0.patch"
-    }
+    "tinacms": "1.0.0"
   }
 }
